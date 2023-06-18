@@ -15,7 +15,7 @@ const App = () => {
       const initialStateData = await getDataAxios('data');
       setState(initialStateData || []);
     };
-  
+
     fetchData();
   }, []);
   const [data, setData] = useState({});
@@ -29,7 +29,7 @@ const App = () => {
   }, [state]);
 
   const handleChange = async val => {
-    const res = await axios.post('http://localhost:8080', val);
+    const res = await axios.post('http://localhost:8081', val);
     val.bmi = res.data.toString();
     val.id = uuidv4();
     let newVal = [...state, val];
