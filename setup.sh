@@ -20,6 +20,3 @@ cd ..
 cd FrontEnd
 echo "Installing FrontEnd dependencies..."
 npm install
-
-# Navigate back to the script's directory
-cd ..
