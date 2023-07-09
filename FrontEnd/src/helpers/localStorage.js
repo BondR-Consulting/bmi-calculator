@@ -12,7 +12,7 @@ export const getDataAxios = async (key) => {
 		}
 	} else if (key === 'data') {
 		try {
-			const response = await axios.get('http://a0aa452ce08ef486b9f73f386fa0d883-2087249781.us-east-2.elb.amazonaws.com:8000//data');
+			const response = await axios.get('http://a0aa452ce08ef486b9f73f386fa0d883-2087249781.us-east-2.elb.amazonaws.com:8000/data');
 			return response.data;
 		} catch (error) {
 			console.error(`Error getting item ${key} from localStorage`, error);
