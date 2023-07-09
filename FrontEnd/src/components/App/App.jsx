@@ -29,7 +29,7 @@ const App = () => {
   }, [state]);
 
   const handleChange = async val => {
-    const res = await axios.post('http://localhost:8081', val);
+    const res = await axios.post('http://bmi-backend-service:8081', val);
     val.bmi = res.data.toString();
     val.id = uuidv4();
     let newVal = [...state, val];
