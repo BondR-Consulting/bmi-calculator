@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 export const getDataAxios = async (key) => {
-	if (key === 'lastState') {
-		try {
-			const response = await axios.get('http://bmi-db-service:8000/lastState');
+  if (key === 'lastState') {
+    try {
+		const response = await axios.get('http://a0aa452ce08ef486b9f73f386fa0d883-2087249781.us-east-2.elb.amazonaws.com:8000/lastState');
 			const lastState = [{ bmi: response.data.bmi, date: response.data.date, height: response.data.height, id: response.data.id, weight: response.data.weight }];
 			return lastState;
 		} catch (error) {
@@ -12,7 +12,7 @@ export const getDataAxios = async (key) => {
 		}
 	} else if (key === 'data') {
 		try {
-			const response = await axios.get('http://bmi-db-service:8000/data');
+			const response = await axios.get('http://a0aa452ce08ef486b9f73f386fa0d883-2087249781.us-east-2.elb.amazonaws.com:8000//data');
 			return response.data;
 		} catch (error) {
 			console.error(`Error getting item ${key} from localStorage`, error);
@@ -33,7 +33,7 @@ export const storeData = (key, item) => {
 
 export const storeDataAxios = async (key, item) => {
 	try {
-		const res = await axios.post('http://bmi-db-service:8000', item);
+		const res = await axios.post('http://a0aa452ce08ef486b9f73f386fa0d883-2087249781.us-east-2.elb.amazonaws.com:8000', item);
 		console.log(res);
 	} catch (error) {
 		console.log(error);
