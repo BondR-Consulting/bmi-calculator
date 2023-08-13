@@ -4,9 +4,13 @@ on:
   pull_request:
     branches:
       - main
+      - app-blue
+      - app-green
   push:
     branches:
       - main
+      - app-blue
+      - app-green
 
 concurrency:
   group: unit-test
