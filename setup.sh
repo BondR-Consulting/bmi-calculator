@@ -3,7 +3,7 @@
 # Navigate to the BackEnd directory
 cd BackEnd
 echo "Installing BackEnd dependencies..."
-npm install
+npm install 
 
 # Navigate back to the script's directory
 cd ..
