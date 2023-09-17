@@ -19,4 +19,4 @@ cd ..
 # Navigate to the FrontEnd directory
 cd FrontEnd
 echo "Installing FrontEnd dependencies..."
-npm install  
+npm install   
